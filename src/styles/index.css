@@ -1,0 +1,55 @@
+/* src/index.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Garante que padding não aumente o tamanho dos elementos */
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  
+  font-family: 'Arial', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Cores para personalização global */
+:root {
+    /* Cores principais que sempre devem ser utilizadas */
+  --blue-primary-color: #45AAFB;
+  --blue-secondary-color: #245E8C;
+  --blue-tertiary-color: #173E5E;
+
+  --pink-primary-color: #FE3B8B;
+  --pink-secondary-color: #AC1D58;
+  --pink-tertiary-color: #640B2F;
+
+  --light-black-color: #2E2E2E; 
+  --medium-black-color: #10131A;
+  --dark-black-color: #0B0D12;
+
+  --light-white-color: #F5F5F5;
+  --medium-white-color: #9E9E9E;
+  --dark-white-color: #504F4F;
+
+    /* Cores de aviso, alerta, sucesso, etc */
+  --red-color: #be0717;
+  --black-red-color: #7e0101;
+  --transparent-red-color: #be071650;
+
+  --green-color: #4abe07;
+  --black-green-color: #2a7001;
+  --transparent-green-color: #4abe0750;
+
+  --yellow-color: #e7ab07;
+  --black-yellow-color: #997103;
+  --transparent-yellow-color: #e7ab0750;
+
+  /* Cores de texto */
+  --light-black-text: #2E2E2E; 
+  --medium-black-text: #10131A;
+  --dark-black-text: #0B0D12;
+
+  --light-white-text: #F5F5F5;
+  --medium-white-text: #9E9E9E;
+  --dark-white-text: #504F4F;
+}
