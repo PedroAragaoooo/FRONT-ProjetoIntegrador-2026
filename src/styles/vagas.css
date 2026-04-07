@@ -1,0 +1,233 @@
+/* CONTAINER */
+.vagas-container {
+    min-height: 100vh;
+    padding: 80px 40px;
+  
+    background: radial-gradient(circle at 20% 20%, #0a0f1f, #05070f 70%);
+    color: var(--light-white-text);
+  }
+  
+  /* HEADER */
+  .vagas-header {
+    max-width: 700px;
+    margin-bottom: 60px;
+  }
+  
+  .vagas-header h1 {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+  
+  .vagas-header p {
+    margin-top: 10px;
+    color: var(--medium-white-text);
+  }
+  
+  /* LISTA */
+  .vagas-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  /* CARD */
+  .vaga-card {
+    width: 320px;
+    padding: 28px;
+    border-radius: 20px;
+  
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.04);
+  
+    backdrop-filter: blur(12px);
+  
+    position: relative;
+    overflow: hidden;
+  
+    transition: 0.4s;
+  }
+  
+  /* detalhe lateral */
+  .vaga-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 20px;
+    bottom: 20px;
+    width: 3px;
+    background: var(--blue-primary-color);
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+  
+  .vaga-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+  }
+  
+  .vaga-card:hover::before {
+    opacity: 1;
+    box-shadow: 0 0 15px var(--blue-primary-color);
+  }
+  
+  /* TOPO */
+  .vaga-topo h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  /* TAGS */
+  .vaga-tags,
+  .modal-tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .vaga-tags span,
+  .modal-tags span {
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 20px;
+  
+    background: rgba(69,170,251,0.08);
+    border: 1px solid rgba(69,170,251,0.2);
+  
+    color: var(--blue-primary-color);
+  }
+  
+  /* DESCRIÇÃO */
+  .vaga-descricao {
+    font-size: 14px;
+    color: var(--medium-white-text);
+    margin-bottom: 20px;
+  }
+  
+  /* BOTÃO DETALHES */
+  .vaga-btn {
+    margin-top: 10px;
+    background: none;
+    border: none;
+  
+    color: var(--blue-primary-color);
+    font-weight: 600;
+  
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .vaga-btn:hover {
+    transform: translateX(5px);
+  }
+  
+  /* OVERLAY */
+  .vaga-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    z-index: 1000;
+  }
+  
+  /* MODAL */
+  .vaga-modal {
+    width: 520px;
+    padding: 40px;
+    border-radius: 24px;
+  
+    background: linear-gradient(
+      180deg,
+      #0a0f1f,
+      #05070f
+    );
+  
+    border: 1px solid rgba(255,255,255,0.05);
+  
+    box-shadow: 0 40px 100px rgba(0,0,0,0.9);
+  
+    animation: fadeIn 0.3s ease;
+  }
+  
+  /* HEADER MODAL */
+  .modal-header {
+    margin-bottom: 20px;
+  }
+  
+  .modal-header button {
+    background: none;
+    border: none;
+    color: var(--blue-primary-color);
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  /* TÍTULO MODAL */
+  .vaga-modal h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  /* TEXTO MODAL */
+  .modal-texto {
+    margin: 20px 0;
+    color: var(--medium-white-text);
+    line-height: 1.6;
+  }
+  
+  /* BOTÃO INSCRIÇÃO */
+  .inscrever-btn {
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+  
+    background: var(--blue-primary-color);
+    border: none;
+  
+    font-weight: 600;
+    cursor: pointer;
+  
+    transition: 0.3s;
+  }
+  
+  .inscrever-btn:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 30px rgba(69,170,251,0.5);
+  }
+  
+  /* ANIMAÇÃO */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  /* RESPONSIVO */
+  @media (max-width: 768px) {
+    .vagas-container {
+      padding: 60px 20px;
+    }
+  
+    .vagas-lista {
+      justify-content: center;
+    }
+  
+    .vaga-card {
+      width: 100%;
+      max-width: 400px;
+    }
+  
+    .vaga-modal {
+      width: 90%;
+      padding: 30px;
+    }
+  }

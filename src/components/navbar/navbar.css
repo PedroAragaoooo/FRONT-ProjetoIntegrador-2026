@@ -1,67 +1,120 @@
 .navbar-container {
     width: 100%;
     height: 70px;
-    background-color: var(--medium-black-color); 
+    background-color: var(--medium-black-color);
+  
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 30px;
-    color: white;
-    margin: 0;
-    border-bottom: 1px solid #f0f2f52a;
-
-    z-index: 1000;
-}
-
-.navbar-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.navbar-logo img {
-    width: 35px;
-}
-
-.logo-text {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--blue-primary-color);
-}
-
-.logo-text span {
-    color: var(--pink-primary-color); /* Azul do seu tema [cite: 52] */
-}
-
-.navbar-links {
-    display: flex;
-    gap: 25px;
-}
-
-.nav-link {
-    text-decoration: none;
+  
+    padding: 0 40px;
     color: var(--light-white-text);
-    font-weight: 500;
-    transition: color 0.2s;
-}
-
-.nav-link:hover, .nav-link.active {
-    color: var(--blue-primary-color);
-}
-
-.navbar-user {
+  
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* LOGO */
+  .navbar-logo {
     display: flex;
     align-items: center;
     gap: 12px;
-}
-
-.nav-login{
-    text-decoration: none;
+  }
+  
+  .navbar-logo img {
+    width: 36px;
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar-logo:hover img {
+    transform: scale(1.08) rotate(-3deg);
+  }
+  
+  .logo-text {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
     color: var(--blue-primary-color);
+  }
+  
+  .logo-text span {
+    color: var(--pink-primary-color);
+  }
+  
+  /* LINKS */
+  .navbar-links {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-link {
+    position: relative;
+    text-decoration: none;
+    color: var(--medium-white-text);
     font-weight: 500;
-    transition: color 0.2s;
-}
-
-.nav-login:hover {
-    color: var(--blue-secondary-color);
-}
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+  
+    transition: all 0.3s ease;
+  }
+  
+  /* underline animado */
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: var(--blue-primary-color);
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: var(--light-white-text);
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  /* ativo */
+  .nav-link.active {
+    color: var(--blue-primary-color);
+  }
+  
+  .nav-link.active::after {
+    width: 100%;
+  }
+  
+  /* USER */
+  .navbar-user {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* BOTÃO LOGIN */
+  .nav-login {
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 999px;
+  
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+  
+    color: var(--blue-primary-color);
+    border: 1px solid var(--blue-primary-color);
+  
+    transition: all 0.3s ease;
+  }
+  
+  .nav-login:hover {
+    background-color: var(--blue-primary-color);
+    color: var(--dark-black-text);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(69, 170, 251, 0.3);
+  }
