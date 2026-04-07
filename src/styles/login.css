@@ -1,0 +1,168 @@
+#root {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.divMain {
+    display: flex;
+    flex-direction: row;
+}
+
+.divMain-esquerda {
+    height: 100vh;
+    width: 65%;
+    background-color: var(--medium-black-color);
+}
+
+.divMain-direita {
+    height: 100vh;
+    width: 35%;
+    background-color: var(--light-white-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 55%;
+}
+
+.input {
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 1rem;
+    width: 100%;
+    border: 1px solid #10131a21;
+    display: flex;
+    height: 45px;
+}
+
+.input svg{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.input-field {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+}
+
+.input-field:focus {
+    background-color: transparent;
+    outline: none;
+}
+
+.text-input {
+    margin-left: 15px;
+}
+
+.forget-Password {
+    margin-right: 15px;
+    font-size: 0.8rem;
+    text-align: right;
+    cursor: pointer;
+}
+
+.not-Func{
+    font-size: 0.8rem;
+    text-align: right;
+    cursor: pointer;
+}
+
+.not-Func span{
+    color: var(--blue-primary-color);
+}
+.not-Func span:hover{
+    color: var(--blue-secondary-color);
+}
+
+.button-div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 55%;
+    margin-top: 15px;
+}
+
+.button{
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 1rem;
+    width: 100%;
+    border: none;
+    background-color: var(--blue-primary-color);
+    color: white;
+    cursor: pointer;
+}
+
+.divPai-esquerda{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: -40px;
+    position: relative;
+}
+
+.divPai-esquerda::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./src/assets/imageLogin.png);
+    background-size: cover;
+    background-position: center;
+
+    z-index: 0;
+
+    opacity: 0.1
+}
+
+.Title-esquerda, .subtitle-esquerda{
+    color: var(--light-white-text);
+}
+
+.logo-image{
+    width: 50px;
+}
+
+.div-title-esquerda, .div-subtitle-esquerda, .div-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    width: 60%;
+}
+
+.Title-esquerda{
+    font-size: clamp(3rem, 6vw, 8rem);
+    font-weight: bold;
+    line-height: 0.99;
+}
+
+.div-logo{
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    width: 88%;
+    border-bottom: solid 1px var(--light-white-color);
+    padding-bottom: 15px;
+}
+
+.div-logo-esquerda{
+    width: 60%;
+}

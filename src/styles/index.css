@@ -27,9 +27,9 @@ html, body, #root {
   --medium-black-color: #10131A;
   --dark-black-color: #0B0D12;
 
-  --light-white-color: #F5F5F5;
-  --medium-white-color: #9E9E9E;
-  --dark-white-color: #504F4F;
+  --light-white-color: #F0F2F5;
+  --medium-white-color: #e0e0e0;
+  --dark-white-color: rgb(158, 158, 158);
 
     /* Cores de aviso, alerta, sucesso, etc */
   --red-color: #be0717;
